@@ -1,70 +1,287 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enaï Léveillé - Contact</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        :root { --bg-main: #FDFBF7; --bg-card: #F4F0EA; --text-main: #2C2A29; --text-muted: #78726D; --accent: #C59B67; --border-color: #E6E1DA; }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--bg-main); color: var(--text-main); line-height: 1.6; display: flex; flex-direction: column; min-height: 100vh; }
-        
-        nav { background-color: var(--bg-card); border-bottom: 1px solid var(--border-color); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
-        .nav-logo { font-weight: 700; font-size: 1.1rem; color: var(--text-main); text-decoration: none; }
-        .nav-links { display: flex; gap: 1.5rem; list-style: none; }
-        .nav-links a { text-decoration: none; color: var(--text-muted); font-size: 0.95rem; font-weight: 500; transition: color 0.2s; }
-        .nav-links a:hover, .nav-links a.active { color: var(--accent); }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact — Énaï Léveillé</title>
+<meta name="description" content="Contacter Énaï Léveillé, chargée de communication et marketing digital. Disponible pour de nouvelles opportunités.">
+<meta name="author" content="Énaï Léveillé">
+<meta name="theme-color" content="#FBF7EF">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Contact — Énaï Léveillé">
+<meta property="og:description" content="Disponible pour de nouvelles opportunités en communication et marketing digital.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23A96A2C'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' font-weight='600' fill='%23FBF7EF' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+:root{
+  --paper:#FBF7EF;
+  --panel:#F4ECDF;
+  --ink:#29241F;
+  --ink-2:#574D42;
+  --muted:#6E6456;
+  --rule:#E3D8C5;
+  --rule-soft:#EDE4D6;
+  --accent:#A96A2C;
+  --accent-deep:#8A5623;
+  --sand:#EADCC3;
+  --green:#5C8A5E;
+  --serif:'Fraunces',Georgia,'Times New Roman',serif;
+  --sans:'Plus Jakarta Sans',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --container:1140px;
+  --gutter:clamp(1.25rem,5vw,3rem);
+  --measure:62ch;
+}
 
-        main { flex: 1; max-width: 700px; width: 100%; margin: 3rem auto; padding: 0 1.5rem; display: flex; flex-direction: column; gap: 2rem; }
-        h2 { font-size: 1.8rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--border-color); }
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  font-family:var(--sans);
+  background:var(--paper);
+  color:var(--ink);
+  font-size:clamp(16px,1.05vw,17px);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+  display:flex;flex-direction:column;min-height:100vh;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+::selection{background:var(--sand);color:var(--ink)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
 
-        .contact-box { background-color: var(--bg-card); padding: 2rem; border-radius: 12px; border: 1px solid var(--border-color); display: flex; flex-direction: column; gap: 1.5rem; }
-        .contact-item { display: flex; align-items: center; gap: 1rem; font-size: 1.1rem; }
-        .contact-item i { color: var(--accent); width: 25px; text-align: center; }
-        .contact-item a { color: var(--text-main); text-decoration: none; transition: color 0.2s; }
-        .contact-item a:hover { color: var(--accent); }
+.wrap{width:100%;max-width:var(--container);margin-inline:auto;padding-inline:var(--gutter)}
 
-        footer { text-align: center; padding: 1.5rem; background-color: var(--bg-card); color: var(--text-muted); font-size: 0.85rem; border-top: 1px solid var(--border-color); }
-        @media(max-width: 600px) { nav { flex-direction: column; gap: 1rem; } .nav-links { gap: 1rem; } }
-    </style>
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.08;letter-spacing:-.015em;color:var(--ink)}
+h3{font-weight:500;letter-spacing:-.01em}
+p{color:var(--ink-2)}
+strong{font-weight:600;color:var(--ink)}
+
+.skip{position:absolute;left:-9999px;top:0;z-index:200;background:var(--ink);color:var(--paper);padding:.6rem 1rem;border-radius:0 0 8px 0;font-weight:600;text-decoration:none;font-size:.9rem}
+.skip:focus{left:0}
+
+/* Navigation */
+.nav{position:sticky;top:0;z-index:50;background:rgba(251,247,239,.86);backdrop-filter:saturate(160%) blur(10px);-webkit-backdrop-filter:saturate(160%) blur(10px);border-bottom:1px solid var(--rule)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:72px}
+.brand{font-family:var(--serif);font-weight:500;font-size:1.25rem;letter-spacing:-.02em;text-decoration:none;color:var(--ink)}
+.nav-menu{display:flex;align-items:center;gap:2rem;list-style:none}
+.nav-menu a{text-decoration:none;color:var(--ink-2);font-size:.95rem;font-weight:500;padding:.35rem 0;position:relative;transition:color .2s}
+.nav-menu a:hover{color:var(--ink)}
+.nav-menu a[aria-current="page"]{color:var(--ink)}
+.nav-menu a[aria-current="page"]::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:2px;background:var(--accent)}
+.nav-toggle{display:none;background:none;border:0;cursor:pointer;color:var(--ink);width:44px;height:44px;margin-right:-.5rem;align-items:center;justify-content:center}
+.nav-toggle svg{width:26px;height:26px}
+.nav-toggle .x{display:none}
+.nav-toggle[aria-expanded="true"] .m{display:none}
+.nav-toggle[aria-expanded="true"] .x{display:block}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;font-family:var(--sans);font-weight:600;font-size:.95rem;line-height:1;padding:.9rem 1.6rem;border-radius:6px;text-decoration:none;cursor:pointer;border:1.5px solid transparent;transition:background .2s,color .2s,border-color .2s}
+.btn-solid{background:var(--ink);color:var(--paper)}
+.btn-solid:hover{background:var(--accent-deep)}
+.btn-ghost{background:transparent;color:var(--ink);border-color:var(--rule)}
+.btn-ghost:hover{border-color:var(--ink)}
+
+/* Availability */
+.status{display:inline-flex;align-items:center;gap:.55rem;font-size:.88rem;font-weight:500;color:var(--ink-2)}
+.status .dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px rgba(92,138,94,.16)}
+
+/* Hero */
+.hero{padding:clamp(2.5rem,7vw,6rem) 0 clamp(2.5rem,5vw,4.5rem)}
+.hero-grid{display:grid;grid-template-columns:1fr .72fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.hero-text>*+*{margin-top:1.5rem}
+.hero h1{font-size:clamp(3.2rem,9vw,6rem);line-height:.98;letter-spacing:-.03em;font-weight:400}
+.hero .role{font-family:var(--sans);font-size:clamp(1.05rem,2.4vw,1.35rem);font-weight:500;color:var(--accent-deep)}
+.hero .lead{font-size:1.1rem;color:var(--ink-2);max-width:52ch}
+.hero-cta{display:flex;flex-wrap:wrap;gap:.85rem}
+.portrait{position:relative}
+.portrait img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:4px;background:var(--panel);box-shadow:0 24px 48px -24px rgba(41,36,31,.28)}
+
+/* Sections */
+.section{padding:clamp(2.75rem,6vw,5rem) 0}
+.section.bordered{border-top:1px solid var(--rule)}
+.section.rule-top{border-top:1px solid var(--rule);padding-top:clamp(2.5rem,5vw,4rem)}
+.section.tight-top{padding-top:0}
+.s-title{font-size:clamp(1.9rem,4.5vw,2.7rem);font-weight:400}
+.s-intro{color:var(--muted);margin-top:.9rem;font-size:1.08rem;max-width:var(--measure)}
+
+/* Home — domaines */
+.cols3{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.5rem,4vw,3rem);margin-top:clamp(2rem,4vw,3rem)}
+.col .mark{width:34px;height:2px;background:var(--accent);margin-bottom:1.1rem}
+.col h3{font-size:1.3rem;margin-bottom:.6rem}
+.col p{color:var(--ink-2);font-size:.98rem}
+
+/* Interior page header */
+.phead{padding:clamp(2.5rem,7vw,5rem) 0 clamp(1.5rem,3vw,2.5rem)}
+.phead h1{font-size:clamp(2.6rem,7vw,4.2rem);font-weight:400;letter-spacing:-.03em}
+.phead p{color:var(--muted);margin-top:1.1rem;font-size:1.1rem;max-width:var(--measure)}
+
+/* CV / expériences */
+.cv-block+.cv-block{margin-top:clamp(2.5rem,5vw,4rem)}
+.cv-h{font-family:var(--serif);font-size:1.4rem;font-weight:500;margin-bottom:.4rem}
+.entry{display:grid;grid-template-columns:9.5rem 1fr;gap:clamp(1rem,3vw,2.5rem);padding:1.75rem 0;border-top:1px solid var(--rule)}
+.entry .when{font-family:var(--serif);font-size:1.02rem;color:var(--accent-deep);font-weight:500;padding-top:.15rem}
+.entry .role-t{font-size:1.22rem;font-family:var(--serif);font-weight:500;line-height:1.2}
+.entry .org{color:var(--muted);margin-top:.3rem;font-size:.98rem}
+.tag{display:inline-block;margin-top:.7rem;font-size:.78rem;font-weight:600;color:var(--accent-deep);background:var(--sand);padding:.28rem .7rem;border-radius:4px}
+.entry ul{list-style:none;margin-top:1rem;display:flex;flex-direction:column;gap:.55rem}
+.entry ul li{position:relative;padding-left:1.3rem;color:var(--ink-2);font-size:.98rem}
+.entry ul li::before{content:"";position:absolute;left:.1rem;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--accent)}
+.entry .desc{margin-top:.8rem;color:var(--ink-2);font-size:.98rem;max-width:60ch}
+
+/* Compétences */
+.grp{display:grid;grid-template-columns:14rem 1fr;gap:clamp(1rem,3vw,2.5rem);padding:1.75rem 0;border-top:1px solid var(--rule)}
+.grp h3{font-size:1.2rem;font-family:var(--serif);font-weight:500;padding-top:.1rem}
+.tags{display:flex;flex-wrap:wrap;gap:.55rem}
+.tags span{border:1px solid var(--rule);border-radius:999px;padding:.45rem .95rem;font-size:.9rem;font-weight:500;color:var(--ink-2)}
+
+/* Langues */
+.langs{display:flex;flex-wrap:wrap;gap:2.5rem;margin-top:clamp(1.5rem,3vw,2rem)}
+.lang .l{font-family:var(--serif);font-size:1.3rem;font-weight:500}
+.lang .lv{color:var(--muted);font-size:.9rem;margin-top:.15rem}
+
+/* Centres d'intérêt */
+.chips{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:clamp(1.5rem,3vw,2rem)}
+.chips span{display:inline-flex;align-items:center;gap:.55rem;border:1px solid var(--rule);border-radius:999px;padding:.55rem 1.15rem;font-size:.92rem;font-weight:500;color:var(--ink-2)}
+.chips i{color:var(--accent);font-size:.95em}
+
+/* Contact */
+.contact-list{display:flex;flex-direction:column}
+.contact-row{display:flex;align-items:center;gap:1rem;padding:1.15rem 0;border-top:1px solid var(--rule);font-size:1.05rem}
+.contact-row:last-child{border-bottom:1px solid var(--rule)}
+.contact-row i{color:var(--accent);width:1.4rem;text-align:center;font-size:1.05rem}
+.contact-row a{text-decoration:none;color:var(--ink);font-weight:500;transition:color .2s}
+.contact-row a:hover{color:var(--accent-deep)}
+.contact-big{font-family:var(--serif);font-size:clamp(1.4rem,3.5vw,2rem);font-weight:500}
+
+/* Footer */
+.foot{margin-top:auto;border-top:1px solid var(--rule);background:var(--panel)}
+.foot-in{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem;padding-block:2rem}
+.foot .brand{font-size:1.1rem}
+.foot .cc{color:var(--muted);font-size:.85rem;margin-top:.35rem}
+.foot-links{display:flex;gap:1.25rem;flex-wrap:wrap}
+.foot-links a{color:var(--ink-2);text-decoration:none;font-size:.9rem;font-weight:500;transition:color .2s}
+.foot-links a:hover{color:var(--accent-deep)}
+
+/* Hero load-in — un seul moment orchestré */
+@media (prefers-reduced-motion:no-preference){
+  .rise{opacity:0;transform:translateY(16px);animation:rise .8s cubic-bezier(.2,.7,.2,1) forwards}
+  .rise.r1{animation-delay:.05s}
+  .rise.r2{animation-delay:.15s}
+  .rise.r3{animation-delay:.25s}
+  .rise.r4{animation-delay:.35s}
+  .portrait{opacity:0;animation:pfade 1s ease .2s forwards}
+  @keyframes rise{to{opacity:1;transform:none}}
+  @keyframes pfade{to{opacity:1}}
+}
+
+/* Responsive */
+@media (max-width:860px){
+  .hero-grid{grid-template-columns:1fr;gap:2.5rem}
+  .portrait{max-width:340px}
+  .cols3{grid-template-columns:1fr;gap:0}
+  .col{border-top:1px solid var(--rule);padding:1.5rem 0}
+  .col .mark{display:none}
+  .entry{grid-template-columns:1fr;gap:.5rem}
+  .entry .when{padding-top:0;font-size:.95rem}
+  .grp{grid-template-columns:1fr;gap:.9rem}
+}
+@media (max-width:720px){
+  .nav-toggle{display:inline-flex}
+  .nav-menu{position:absolute;top:72px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--paper);border-bottom:1px solid var(--rule);padding:.5rem var(--gutter) 1rem;box-shadow:0 12px 24px rgba(41,36,31,.06);display:none}
+  .nav-menu.open{display:flex}
+  .nav-menu li{border-top:1px solid var(--rule-soft)}
+  .nav-menu li:first-child{border-top:0}
+  .nav-menu a{padding:.9rem 0}
+  .nav-menu a[aria-current="page"]::after{display:none}
+}
+</style>
 </head>
 <body>
 
-    <nav>
-        <a href="index.html" class="nav-logo">Enaï Léveillé</a>
-        <ul class="nav-links">
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="parcours.html">Parcours</a></li>
-            <li><a href="competences.html">Compétences</a></li>
-            <li><a href="contact.html" class="active">Contact</a></li>
-        </ul>
+<a class="skip" href="#main">Aller au contenu</a>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="index.html">Énaï Léveillé</a>
+    <nav aria-label="Navigation principale">
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="parcours.html">Parcours</a></li>
+        <li><a href="competences.html">Compétences</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
     </nav>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-menu">
+      <svg class="m" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <svg class="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+  </div>
+</header>
 
-    <main>
-        <h2>Me Contacter</h2>
-        <p style="color: var(--text-muted);">Je suis actuellement disponible immédiatement pour de nouvelles opportunités en marketing digital et communication. N'hésitez pas à me contacter !</p>
-        
-        <div class="contact-box">
-            <div class="contact-item">
-                <i class="fas fa-envelope"></i>
-                <a href="mailto:enaieleveille@gmail.com">enaieleveille@gmail.com</a>
-            </div>
-            <div class="contact-item">
-                <i class="fas fa-phone"></i>
-                <a href="tel:+33687696774">+33 6 87 69 67 74</a>
-            </div>
-            <div class="contact-item">
-                <i class="fas fa-map-marker-alt"></i>
-                <span>Paris, Île-de-France (Permis B)</span>
-            </div>
+<main id="main">
+  <section class="phead">
+    <div class="wrap">
+      <h1>Travaillons ensemble</h1>
+      <p>Actuellement disponible pour de nouvelles opportunités en communication et marketing digital. N'hésitez pas à me contacter, je réponds avec plaisir.</p>
+    </div>
+  </section>
+
+  <section class="section tight-top">
+    <div class="wrap">
+      <div class="contact-list">
+        <div class="contact-row">
+          <i class="fa-solid fa-envelope"></i>
+          <a class="contact-big" href="mailto:enaieleveille@gmail.com">enaieleveille@gmail.com</a>
         </div>
-    </main>
+        <div class="contact-row">
+          <i class="fa-solid fa-phone"></i>
+          <a href="tel:+33687696774">+33 6 87 69 67 74</a>
+        </div>
+        <div class="contact-row">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>Paris, Île-de-France (Permis B)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
 
-    <footer>
-        <p>&copy; 2026 - Enaï Léveillé</p>
-    </footer>
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div>
+      <a class="brand" href="index.html">Énaï Léveillé</a>
+      <div class="cc">© 2026 Énaï Léveillé. Tous droits réservés.</div>
+    </div>
+    <nav class="foot-links" aria-label="Pied de page">
+      <a href="parcours.html">Parcours</a>
+      <a href="competences.html">Compétences</a>
+      <a href="contact.html">Contact</a>
+      <a href="mailto:enaieleveille@gmail.com">E-mail</a>
+    </nav>
+  </div>
+</footer>
 
+<script>
+(function () {
+  var t = document.querySelector('.nav-toggle');
+  var m = document.getElementById('nav-menu');
+  if (!t || !m) return;
+  t.addEventListener('click', function () {
+    var open = t.getAttribute('aria-expanded') === 'true';
+    t.setAttribute('aria-expanded', String(!open));
+    m.classList.toggle('open', !open);
+  });
+  m.querySelectorAll('a').forEach(function (a) {
+    a.addEventListener('click', function () {
+      t.setAttribute('aria-expanded', 'false');
+      m.classList.remove('open');
+    });
+  });
+})();
+</script>
 </body>
 </html>
